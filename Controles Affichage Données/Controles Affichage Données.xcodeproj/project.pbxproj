@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96614A471BE121DC00890C0D /* ViewControllerImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 96614A461BE121DC00890C0D /* ViewControllerImages.m */; };
 		968194281BE109750038094E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 968194271BE109750038094E /* main.m */; };
 		9681942B1BE109750038094E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9681942A1BE109750038094E /* AppDelegate.m */; };
 		9681942E1BE109750038094E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9681942D1BE109750038094E /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96614A451BE121DC00890C0D /* ViewControllerImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerImages.h; sourceTree = "<group>"; };
+		96614A461BE121DC00890C0D /* ViewControllerImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerImages.m; sourceTree = "<group>"; };
 		968194231BE109750038094E /* Controles Affichage Données.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Controles Affichage Données.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		968194271BE109750038094E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		968194291BE109750038094E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				9681942A1BE109750038094E /* AppDelegate.m */,
 				9681942C1BE109750038094E /* ViewController.h */,
 				9681942D1BE109750038094E /* ViewController.m */,
+				96614A451BE121DC00890C0D /* ViewControllerImages.h */,
+				96614A461BE121DC00890C0D /* ViewControllerImages.m */,
 				9681942F1BE109750038094E /* Main.storyboard */,
 				968194321BE109750038094E /* Assets.xcassets */,
 				968194341BE109750038094E /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			files = (
 				9681942E1BE109750038094E /* ViewController.m in Sources */,
 				9681942B1BE109750038094E /* AppDelegate.m in Sources */,
+				96614A471BE121DC00890C0D /* ViewControllerImages.m in Sources */,
 				968194281BE109750038094E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +304,7 @@
 				9681943C1BE109750038094E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

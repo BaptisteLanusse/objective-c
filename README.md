@@ -320,6 +320,80 @@ maTextView.font = [UIFont fontWithName:@"Courier" size:10.0f];
 maTextView.textColor = [UIColor colorWithRed:0.0f green:1.0f blue:1.0f alpha:1.0f];
 ```
 
+###### Image View - Affichage d'une image
+
+Le contrôle ```Image View``` permet l'affichage d'une image.
+
+###### *Image dans l'album:*
+
+dans le ```.h```:
+```objective-c
+#import <UIKit/UIKit.h>
+
+@interface ViewControllerImages : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+{
+    UIImagePickerController *picker;
+}
+
+@property (weak, nonatomic) IBOutlet UIImageView *monImage;
+
+- (IBAction)album:(id)sender;
+
+@end
+```
+
+dans le ```.m```:
+```objective-c
+#import "ViewControllerImages.h"
+
+@interface ViewControllerImages ()
+
+@end
+
+@implementation ViewControllerImages
+
+@synthesize monImage;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (IBAction)album:(id)sender {
+    picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    monImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    monImage.image = nil;
+}
+
+@end
+```
+
 ## Réalisations
 
 ###### TP - Mastermind

@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="1117" y="429"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Images-->
         <scene sceneID="KgZ-Ye-evj">
             <objects>
-                <viewController id="bI1-9D-ggh" sceneMemberID="viewController">
+                <viewController id="bI1-9D-ggh" customClass="ViewControllerImages" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6bJ-sh-d8A"/>
                         <viewControllerLayoutGuide type="bottom" id="hcJ-zD-llH"/>
@@ -125,14 +125,57 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="du8-DV-KnJ">
+                                <rect key="frame" x="20" y="135" width="560" height="249"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="kDS-KM-pIp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAC-wR-56s">
+                                <rect key="frame" x="224" y="408" width="152" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GA4-cd-Bqv"/>
+                                    <constraint firstAttribute="width" constant="152" id="Xe1-gQ-hSK"/>
+                                </constraints>
+                                <state key="normal" title="Image album"/>
+                                <connections>
+                                    <action selector="album:" destination="bI1-9D-ggh" eventType="touchUpInside" id="eaR-ai-MnH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlK-Md-ryk">
+                                <rect key="frame" x="224" y="527" width="152" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="Pav-pY-OFH"/>
+                                    <constraint firstAttribute="height" constant="30" id="q5e-Eo-iZL"/>
+                                </constraints>
+                                <state key="normal" title="Affichage de Textes"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="txz-uX-iMq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3H9-UY-tB4" firstAttribute="top" secondItem="6bJ-sh-d8A" secondAttribute="bottom" constant="21" id="Zze-kT-lz9"/>
+                            <constraint firstItem="KAC-wR-56s" firstAttribute="top" secondItem="du8-DV-KnJ" secondAttribute="bottom" constant="24" id="5oe-a5-Afd"/>
+                            <constraint firstItem="du8-DV-KnJ" firstAttribute="trailing" secondItem="KcX-On-oEj" secondAttribute="trailingMargin" id="Mg6-hc-wdY"/>
+                            <constraint firstItem="3H9-UY-tB4" firstAttribute="top" secondItem="6bJ-sh-d8A" secondAttribute="bottom" constant="65" id="Zze-kT-lz9"/>
+                            <constraint firstItem="KAC-wR-56s" firstAttribute="centerX" secondItem="KcX-On-oEj" secondAttribute="centerX" id="dU5-P5-MoA"/>
+                            <constraint firstItem="du8-DV-KnJ" firstAttribute="leading" secondItem="KcX-On-oEj" secondAttribute="leadingMargin" id="gBr-UU-ShC"/>
+                            <constraint firstItem="du8-DV-KnJ" firstAttribute="top" secondItem="3H9-UY-tB4" secondAttribute="bottom" constant="29" id="iPc-zQ-IvK"/>
+                            <constraint firstItem="hlK-Md-ryk" firstAttribute="top" secondItem="KAC-wR-56s" secondAttribute="bottom" constant="89" id="nfd-nz-QvE"/>
                             <constraint firstItem="3H9-UY-tB4" firstAttribute="centerX" secondItem="KcX-On-oEj" secondAttribute="centerX" id="poV-WT-hti"/>
+                            <constraint firstItem="hlK-Md-ryk" firstAttribute="centerX" secondItem="KcX-On-oEj" secondAttribute="centerX" id="qPV-wy-IYN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="monImage" destination="du8-DV-KnJ" id="rf7-gy-N1q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGk-4X-ql5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,4 +201,7 @@
             <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="txz-uX-iMq"/>
+    </inferredMetricsTieBreakers>
 </document>
