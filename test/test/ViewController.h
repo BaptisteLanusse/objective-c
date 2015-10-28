@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+-(NSString*) concat:(NSString*)ch1: (NSString*)ch2;
 
 @end
 

@@ -25,7 +25,7 @@ struct unePersonne
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSLog(@"\nDEBUG ----- Everything went OK, App launched.\n\n");
+    NSLog(@"\nDEBUG ----- Everything went OK, App launched.\n\n\n\n");
     
     struct unePersonne schwarzi;
     schwarzi.prenom = "Arnold";
@@ -35,12 +35,19 @@ struct unePersonne
     NSLog(@"DEV ----- cast Ascii depuis un int\n");
     int valeurAscii = 125;
     char caractere = (char)valeurAscii;
-    NSLog(@"DEV ----- Resultat du cast: '%c'", caractere);
+    NSLog(@"DEV ----- Resultat du cast: '%c'\n\n\n\n", caractere);
+    
+    NSLog(@"DEV ----- Test d'implémentation d'une méthode d'instance\n");
+    NSLog(@"DEV ----- %@", [self concat:@"premier " :@"deuxième"]);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSString*) concat:(NSString*)ch1: (NSString*)ch2{
+    return [ch1 stringByAppendingString:ch2];
 }
 
 @end

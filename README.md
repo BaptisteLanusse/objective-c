@@ -187,3 +187,31 @@ Dans le fichier ```.m```, dans l'implémentation des méthodes:
 	return [ch1 stringByAppendingString:ch2];
 }
 ```
+
+#### Instanciation d'un objet
+
+Il existe deux solutions pour instancier un objet, la première laisse à la machine le soin de gérer la libération de l'espace mémoire, la seconde impose à l'utilisateur de la libérer.
+
+Depuis iOS 5, ARC (Automatic Reference Counting) a été intégré, et l'utilisateur n'a plus besoin de gérer la libération.
+
+Par exemple, pour un objet NSString, les deux appels suivants déclarent le même objet, mais l'utilisateur devra libérer l'espace dans le second cas.
+
+```objective-c
+NSString* maChaine;
+```
+
+```objective-c
+NSString* maChaine = [[NSString alloc] init];
+```
+
+Si ARC n'est pas actif, l'instruction pour détruire l'objet ```maChaine``` est: ```[maChaine dealloc]```
+
+#### Cycle de vie d'un objet
+
+Tous les objets suivent le même cycle de vie:
+
+1. Création
+2. Utilisation
+3. Destruction
+
+Arc gère automatiquement la destruction des objets.
