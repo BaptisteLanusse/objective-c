@@ -172,3 +172,18 @@ Ou:
 L'appel de méthode en Objective-c se fait via l'instruction ```[objet methode];```
 
 Si la méthode demande des paramètres, l'appel se fait via ```[objet methode:valeur1 param2:valeur2 param3:valeur3 ...];```
+
+Ci-dessous, un exemple de création d'une méthode concat retournant la concaténation de deux chaines:
+
+Dans le fichier ```.h```, dans la déclaration de l'interface:
+```objective-c
+-(NSString*) concat:(NSString*)ch1: (NSString*)ch2;
+```
+
+Dans le fichier ```.m```, dans l'implémentation des méthodes:
+```objective-c
+-(NSString*) concat:(NSString*)ch1: (NSString*)ch2
+{
+	return [ch1 stringByAppendingString:ch2];
+}
+```
