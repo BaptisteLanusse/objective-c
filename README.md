@@ -9,8 +9,10 @@ Cette partie teste Objective-C et XCode pour le développement d'applications iO
 
 # Liste des commandes
 
+```
 cmd + <-			=>			Rotation à gauche
 cmd + ->			=>			Rotation à droite
 cmd + L 			=>			Verrouiller
 Ctrl + cmd + Z 		=>			Secousse
 Maj + cmd + H 		=>			Ecran d'accueil
+```
