@@ -89,3 +89,8 @@ type nom(paramètres)
 	return retour;
 }
 ```
+
+# Programmation orientée objet
+Séparation des fichiers en headers et corps.
+
+Les fichiers headers sont mentionnés ```.h```
