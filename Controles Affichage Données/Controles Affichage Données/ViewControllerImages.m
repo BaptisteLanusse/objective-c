@@ -47,6 +47,11 @@
     monImage.image = [UIImage imageNamed:@"image.png"];
 }
 
+- (IBAction)net:(id)sender {
+    NSURL *netImage = [NSURL URLWithString:@"http://www.siteduzero.com/uploads/fr/ftp/iphone/zozor.png"];
+    monImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:netImage]];
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     monImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [picker dismissViewControllerAnimated:YES completion:nil];

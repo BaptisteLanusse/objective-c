@@ -19,4 +19,6 @@
 
 - (IBAction)resource:(id)sender;
 
+- (IBAction)net:(id)sender;
+
 @end

@@ -410,6 +410,25 @@ et dans le ```.m```, pour une image appelée ```image.png``` et placée dans le 
 }
 ```
 
+###### *Image sur le net:*
+
+Si l'image est sur le net, on procède comme suit:
+
+D'abord, dans Info.plist, sous Information Property List, il faut ajouter App Transport Security Settings, et à l'intérieur, Allow Arbitrary Loads et le mettre à YES
+
+ensuite, dans le ```.h```, l'appel depuis l'appui sur un bouton à:
+```objective-c
+- (IBAction)net:(id)sender;
+```
+
+et dans le ```.m```, pour l'url http://www.siteduzero.com/uploads/fr/ftp/iphone/zozor.png:
+```objective-c
+- (IBAction)net:(id)sender {
+    NSURL *netImage = [NSURL URLWithString:@"http://www.siteduzero.com/uploads/fr/ftp/iphone/zozor.png"];
+    monImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:netImage]];
+}
+```
+
 ## Réalisations
 
 ###### TP - Mastermind
