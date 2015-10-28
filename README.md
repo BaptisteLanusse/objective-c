@@ -7,7 +7,7 @@ Cette partie teste Objective-C et XCode pour le développement d'applications iO
     Intel Core i5 3,2 GHz
     16 Go Ram
 
-# Liste des commandes
+## Liste des commandes
 
 ```
 cmd + <-			=>			Rotation à gauche
@@ -17,7 +17,7 @@ Ctrl + cmd + Z 		=>			Secousse
 Maj + cmd + H 		=>			Ecran d'accueil
 ```
 
-# Outils de comparaison
+## Outils de comparaison
 Les tests sont effectués via l'instruction if.
 
 Les traitements sont traités dans l'autre suivant:
@@ -36,7 +36,7 @@ OU logique                          |                   ||
 Affectation                         |                   =
 ```
 
-# Switch
+## Switch
 ```objective-c
 switch (variable)
 {
@@ -56,8 +56,8 @@ switch (variable)
 }
 ```
 
-# Les Boucles
-Boucle for:
+## Les Boucles
+#### Boucle for:
 ```objective-c
 for (début; condition de fin; incrément)
 {
@@ -65,7 +65,7 @@ for (début; condition de fin; incrément)
 }
 ```
 
-Boucle while:
+#### Boucle while:
 ```objective-c
 while(condition)
 {
@@ -73,7 +73,7 @@ while(condition)
 }
 ```
 
-Boucle do-while
+#### Boucle do-while
 ```objective-c
 do
 {
@@ -81,7 +81,7 @@ do
 }while(condition)
 ```
 
-# Les fonctions
+## Les fonctions
 ```objective-c
 type nom(paramètres)
 {
@@ -90,7 +90,7 @@ type nom(paramètres)
 }
 ```
 
-# Programmation orientée objet
+## Programmation orientée objet
 Séparation des fichiers en headers et corps.
 
 Les fichiers headers sont mentionnés ```.h```
@@ -149,3 +149,18 @@ Exemple d'un fichier ```.m```:
 ```
 
 #### Les méthodes de classe
+
+Le format générique des méthodes est le suivant:
+
+```objective-c
+typeMethode (typeRetour) nomMethode : paramètres
+{
+	//instructions
+};
+```
+
+Ou:
+	- ```typeMethod``` vaut ```+``` pour une méthode de classe ou ```-``` pour une méthode d'instane
+	- ```typeRetour``` est le type retourné par la méthode
+	- ```nomMethode``` est le nom de la méthode
+	- ```parametres``` correspond aux paramètres de la méthode, s'ils existent, composés de couples ```(type)nom``` séparés par des ```,```.
