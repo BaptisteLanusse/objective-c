@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface Voiture : NSObject
-
+{
+    NSString *modele;
+    NSString *couleur;
+}
+- (NSString*) modele; //en-tête du getter de modele
+- (NSString*) couleur; //en-tête du getter de couleur
+- (void) setModele: (NSString*)input; //en-tête du setter du modele
+- (void) setCouleur: (NSString*)input; //en-tête du setter de la couleur
 @end

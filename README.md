@@ -136,5 +136,14 @@ Exemple d'un fichier ```.m```:
 - (void) setCouleur: (NSString*)nouvCouleur {
 	couleur = nouvCouleur;
 }
+// Constructeur de la classe
+- (id) init {
+    if ( self = [super init])
+    {
+        [self setModele:@"Maserati Spyder"];
+        [self setCouleur:@"Rouge"];
+    }
+    return self;
+}
 @end
 ```
