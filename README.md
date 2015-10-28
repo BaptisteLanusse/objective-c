@@ -23,15 +23,15 @@ Les tests sont effectués via l'instruction if.
 Les traitements sont traités dans l'autre suivant:
 
 ```
-Parenthèses							|					()
-Changement de signe					|					-
-incrémentation ou décrémentation	|					++ et --
-Négation							|					!
-Multiplication, division, modulo	|					*, / et %
-Addition, soustraction				|					+ et -
-tests supériorité, infériorité		|					<, <=, > et >=
-Egalité, différence					|					== et !=
-ET logique							|					&&
-OU logique							|					||
-Affectation							|					=
+Parenthèses                         |                   ()
+Changement de signe                 |                   -
+incrémentation ou décrémentation    |                   ++ et --
+Négation                            |                   !
+Multiplication, division, modulo    |                   *, / et %
+Addition, soustraction              |                   + et -
+tests supériorité, infériorité      |                   <, <=, > et >=
+Egalité, différence                 |                   == et !=
+ET logique                          |                   &&
+OU logique                          |                   ||
+Affectation                         |                   =
 ```
