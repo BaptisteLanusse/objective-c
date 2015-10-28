@@ -165,3 +165,6 @@ Ou:
   - ```typeRetour``` est le type retourné par la méthode
   - ```nomMethode``` est le nom de la méthode
   - ```parametres``` correspond aux paramètres de la méthode, s'ils existent, composés de couples ```(type)nom``` séparés par des ```,```.
+
+
+#### Appel de méthodes
