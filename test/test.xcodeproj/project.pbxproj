@@ -13,6 +13,7 @@
 		96891DC51BE0C6A8002FBB76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96891DC31BE0C6A8002FBB76 /* Main.storyboard */; };
 		96891DC71BE0C6A8002FBB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96891DC61BE0C6A8002FBB76 /* Assets.xcassets */; };
 		96891DCA1BE0C6A8002FBB76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96891DC81BE0C6A8002FBB76 /* LaunchScreen.storyboard */; };
+		96891DD51BE0D61D002FBB76 /* Voiture.m in Sources */ = {isa = PBXBuildFile; fileRef = 96891DD41BE0D61D002FBB76 /* Voiture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		96891DC61BE0C6A8002FBB76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96891DC91BE0C6A8002FBB76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96891DCB1BE0C6A8002FBB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96891DD31BE0D61D002FBB76 /* Voiture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voiture.h; sourceTree = "<group>"; };
+		96891DD41BE0D61D002FBB76 /* Voiture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voiture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				96891DBE1BE0C6A8002FBB76 /* AppDelegate.m */,
 				96891DC01BE0C6A8002FBB76 /* ViewController.h */,
 				96891DC11BE0C6A8002FBB76 /* ViewController.m */,
+				96891DD31BE0D61D002FBB76 /* Voiture.h */,
+				96891DD41BE0D61D002FBB76 /* Voiture.m */,
 				96891DC31BE0C6A8002FBB76 /* Main.storyboard */,
 				96891DC61BE0C6A8002FBB76 /* Assets.xcassets */,
 				96891DC81BE0C6A8002FBB76 /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			files = (
 				96891DC21BE0C6A8002FBB76 /* ViewController.m in Sources */,
 				96891DBF1BE0C6A8002FBB76 /* AppDelegate.m in Sources */,
+				96891DD51BE0D61D002FBB76 /* Voiture.m in Sources */,
 				96891DBC1BE0C6A8002FBB76 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
