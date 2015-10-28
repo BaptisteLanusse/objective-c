@@ -287,6 +287,39 @@ NSLocale *frLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"];
 NSLog(@"Date au format %@: %@", [[miseEnForme locale] localeIdentifier], [miseEnForme stringFromDate:date]);
 ```
 
+## Controles d'affichage de données
+
+###### Label - Texte non modifiable
+
+Le contrôle ```Label``` permet d'afficher du texte non modifiable.
+
+```objective-c
+monLabel.text = @"Un court texte affiché dans le contrôle Label sur deux lignes";
+monLabel.numberOfLines = 2;
+monLabel.font = [UIFont fontWithName:@"Courier" size:10.0f];
+monLabel.textAlignment = NSTextAlignmentCenter;
+monLabel.textColor = [UIColor colorWithRed: 1.0f green: 0.0f blue: 0.0f alpha: 1.0f];
+```
+
+###### Text Field - Saisie de texte sur une ligne
+
+Le contrôle ```Text Field``` permet la saisie de texte sur une ligne.
+
+```objective-c
+monTextField.textAlignment = NSTextAlignmentCenter;
+monTextField.placeholder = @"Texte afiché en attendant la saisie";
+```
+
+###### Text View - Saisie de texte sur plusieurs lignes
+
+Le contrôle ```Text View``` permet la saisie de texte sur plusieurs lignes.
+
+```objective-c
+maTextView.textAlignment = NSTextAlignmentLeft;
+maTextView.font = [UIFont fontWithName:@"Courier" size:10.0f];
+maTextView.textColor = [UIColor colorWithRed:0.0f green:1.0f blue:1.0f alpha:1.0f];
+```
+
 ## Réalisations
 
 ###### TP - Mastermind
@@ -295,4 +328,12 @@ Un jeu de mastermind basique se jouant avec les nombres.
 
 ###### Test
 
-Une application testant les fonctionnalités de base d'Objective-C
+Une application testant les fonctionnalités de base d'Objective-C.
+
+###### Application Multi-vues
+
+Cette application permet de tester la navigation entre les différentes vues d'une application.
+
+###### Controles Affichage Données
+
+Cette application permet de visualiser les différentes méthodes d'affichage de données.
