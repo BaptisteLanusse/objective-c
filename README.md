@@ -168,3 +168,7 @@ Ou:
 
 
 #### Appel de méthodes
+
+L'appel de méthode en Objective-c se fait via l'instruction ```[objet methode];```
+
+Si la méthode demande des paramètres, l'appel se fait via ```[objet methode:valeur1 param2:valeur2 param3:valeur3 ...];```
