@@ -148,4 +148,4 @@ Exemple d'un fichier ```.m```:
 @end
 ```
 
-## Les méthodes de classe
+#### Les méthodes de classe
