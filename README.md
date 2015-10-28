@@ -80,3 +80,12 @@ do
 	//instructions
 }while(condition)
 ```
+
+# Les fonctions
+```objective-c
+type nom(paramètres)
+{
+	//instructions
+	return retour;
+}
+```
