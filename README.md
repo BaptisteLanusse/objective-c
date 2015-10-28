@@ -1,6 +1,6 @@
 # objective-c
 ```
-Cette partie présente l'utilisation d'Objective-C et d'XCode dans le développement d'applications iOS.
+Cette partie teste Objective-C et XCode pour le développement d'applications iOS.
 ```
     OS X El Capitan
     Version 10.11.1
