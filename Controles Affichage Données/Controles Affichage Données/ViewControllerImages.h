@@ -17,4 +17,6 @@
 
 - (IBAction)album:(id)sender;
 
+- (IBAction)resource:(id)sender;
+
 @end

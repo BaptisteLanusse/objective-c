@@ -43,6 +43,10 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
+- (IBAction)resource:(id)sender {
+    monImage.image = [UIImage imageNamed:@"image.png"];
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     monImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [picker dismissViewControllerAnimated:YES completion:nil];

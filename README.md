@@ -394,6 +394,22 @@ dans le ```.m```:
 @end
 ```
 
+###### *Image en ressource de l'application:*
+
+Si l'image est dans les ressources de l'application, on procède comme suit:
+
+dans le ```.h```, l'appel depuis l'appui sur un bouton à:
+```objective-c
+- (IBAction)resource:(id)sender;
+```
+
+et dans le ```.m```, pour une image appelée ```image.png``` et placée dans le groupe ```Resources```:
+```objective-c
+- (IBAction)resource:(id)sender {
+    monImage.image = [UIImage imageNamed:@"image.png"];
+}
+```
+
 ## Réalisations
 
 ###### TP - Mastermind

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96614A471BE121DC00890C0D /* ViewControllerImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 96614A461BE121DC00890C0D /* ViewControllerImages.m */; };
+		96614A4A1BE1256900890C0D /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 96614A491BE1256900890C0D /* image.png */; };
 		968194281BE109750038094E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 968194271BE109750038094E /* main.m */; };
 		9681942B1BE109750038094E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9681942A1BE109750038094E /* AppDelegate.m */; };
 		9681942E1BE109750038094E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9681942D1BE109750038094E /* ViewController.m */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		96614A451BE121DC00890C0D /* ViewControllerImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerImages.h; sourceTree = "<group>"; };
 		96614A461BE121DC00890C0D /* ViewControllerImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerImages.m; sourceTree = "<group>"; };
+		96614A491BE1256900890C0D /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		968194231BE109750038094E /* Controles Affichage Données.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Controles Affichage Données.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		968194271BE109750038094E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		968194291BE109750038094E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96614A481BE1255E00890C0D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96614A491BE1256900890C0D /* image.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		9681941A1BE109750038094E = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 		968194251BE109750038094E /* Controles Affichage Données */ = {
 			isa = PBXGroup;
 			children = (
+				96614A481BE1255E00890C0D /* Resources */,
 				968194291BE109750038094E /* AppDelegate.h */,
 				9681942A1BE109750038094E /* AppDelegate.m */,
 				9681942C1BE109750038094E /* ViewController.h */,
@@ -144,6 +155,7 @@
 				968194361BE109750038094E /* LaunchScreen.storyboard in Resources */,
 				968194331BE109750038094E /* Assets.xcassets in Resources */,
 				968194311BE109750038094E /* Main.storyboard in Resources */,
+				96614A4A1BE1256900890C0D /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
