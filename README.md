@@ -260,3 +260,39 @@ for(cpt = 0; cpt < length; cpt++)
 	NSLog(@"La lettre en position %i est %c", cpt, lettre);
 }
 ```
+
+###### Affichage de la date courante
+
+```objective-c
+/* ---Définition de l'objet date et de sa mise en forme--- */
+
+// Aujourd'hui
+NSDate *date = [NSDate date];
+NSDateFormatter *miseEnForme = [[NSDateFormatter alloc] init];
+
+// Aucun affichage de l'heure
+[miseEnForme setTimeStyle:NSDateFormatterNoStyle];
+
+// Affichage de la date au format semi-abrégé
+[miseEnForme setDateStyle:NSDateFormatterMediumStyle];
+
+/* ---Affichage de la date au format US--- */
+NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+[miseEnForme setLocale:usLocale];
+NSLog(@"Date au format %@: %@", [[miseEnForme locale] localeIdentifier], [miseEnForme stringFromDate:date]);
+
+/* ---Affichage de la date au format FR--- */
+NSLocale *frLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"];
+[miseEnForme setLocale:frLocale];
+NSLog(@"Date au format %@: %@", [[miseEnForme locale] localeIdentifier], [miseEnForme stringFromDate:date]);
+```
+
+## Réalisations
+
+###### TP - Mastermind
+
+Un jeu de mastermind basique se jouant avec les nombres.
+
+###### Test
+
+Une application testant les fonctionnalités de base d'Objective-C
