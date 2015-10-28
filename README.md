@@ -160,6 +160,7 @@ typeMethode (typeRetour) nomMethode : paramètres
 ```
 
 Ou:
+
 	- ```typeMethod``` vaut ```+``` pour une méthode de classe ou ```-``` pour une méthode d'instane
 	- ```typeRetour``` est le type retourné par la méthode
 	- ```nomMethode``` est le nom de la méthode
