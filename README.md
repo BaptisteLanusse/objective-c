@@ -55,3 +55,28 @@ switch (variable)
 		break;
 }
 ```
+
+# Les Boucles
+Boucle for:
+```objective-c
+for (début; condition de fin; incrément)
+{
+	//instructions
+}
+```
+
+Boucle while:
+```objective-c
+while(condition)
+{
+	//instructions
+}
+```
+
+Boucle do-while
+```objective-c
+do
+{
+	//instructions
+}while(condition)
+```
