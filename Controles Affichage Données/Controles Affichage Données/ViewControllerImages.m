@@ -19,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSURL *image = [NSURL URLWithString:@"http://www.siteduzero.com/uploads/fr/ftp/iphone/zozor.png"];
+    UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:image]];
+    NSData* imageData = UIImagePNGRepresentation(img);
+    [imageData writeToFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Documents/image.png"] atomically:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,6 +54,13 @@
 - (IBAction)net:(id)sender {
     NSURL *netImage = [NSURL URLWithString:@"http://www.siteduzero.com/uploads/fr/ftp/iphone/zozor.png"];
     monImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:netImage]];
+}
+
+- (IBAction)sandbox:(id)sender {
+    //Récupération du fichier dans la sandbox et affichage dans le Image View
+    NSString *image = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/image.png"];
+    UIImage *recup = [UIImage imageWithContentsOfFile:image];
+    monImage.image = recup;
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {

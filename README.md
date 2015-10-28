@@ -429,6 +429,152 @@ et dans le ```.m```, pour l'url http://www.siteduzero.com/uploads/fr/ftp/iphone/
 }
 ```
 
+###### *Image dans la sandbox:*
+
+Si l'image est stockée dans la sandbox de l'application, il faut procéder comme suit:
+
+dans le fichier ```.h```, l'appel depuis l'appui sur un bouton à:
+```objective-c
+- (IBAction)sandbox:(id)sender;
+```
+
+et dans le ```.m```:
+```objective-c
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    NSURL *image = [NSURL URLWithString:@"http://www.siteduzero.com/uploads/fr/ftp/iphone/zozor.png"];
+    UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:image]];
+    NSData* imageData = UIImagePNGRepresentation(img);
+    [imageData writeToFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Documents/image.png"] atomically:NO];
+}
+
+- (IBAction)sandbox:(id)sender {
+    //Récupération du fichier dans la sandbox et affichage dans le Image View
+    NSString *image = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/image.png"];
+    UIImage *recup = [UIImage imageWithContentsOfFile:image];
+    monImage.image = recup;
+}
+```
+
+###### Web View - Affichage de contenu Web
+
+Le composant ```Web View``` permet d'afficher le contenu d'une page web.
+
+Dans le ```.h```:
+```objective-c
+#import <UIKit/UIKit.h>
+
+@interface ViewControllerWeb : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+@end
+
+```
+
+Et dans le ```.m```:
+```objective-c
+#import "ViewControllerWeb.h"
+
+@interface ViewControllerWeb ()
+
+@end
+
+@implementation ViewControllerWeb
+
+@synthesize webView;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [webView loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://www.google.fr"]]];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
+```
+
+###### Map View - Affichage de contenu Web
+
+Le composant ```Map View``` permet d'afficher une carte.
+
+Il est nécessaire d'ajouter le framework MapKit via Build Phases, Link Binary With Libraries et ajouter MapKit.
+
+Puis, dans le ```.h```:
+```objective-c
+#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
+@interface ViewControllerMap : UIViewController
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+@end
+```
+
+Et dans le ```.m```:
+```objective-c
+#import "ViewControllerMap.h"
+
+@interface ViewControllerMap ()
+
+@end
+
+@implementation ViewControllerMap
+
+@synthesize mapView;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.5;
+    span.longitudeDelta = 0.5;
+    
+    CLLocationCoordinate2D parisCoordinates;
+    parisCoordinates.latitude = 48.858391;
+    parisCoordinates.longitude = 2.35279;
+    
+    MKCoordinateRegion parisRegion;
+    parisRegion.span = span;
+    parisRegion.center = parisCoordinates;
+    
+    [mapView setRegion:parisRegion animated:YES];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
+```
+
 ## Réalisations
 
 ###### TP - Mastermind

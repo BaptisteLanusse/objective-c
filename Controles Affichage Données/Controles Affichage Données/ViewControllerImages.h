@@ -21,4 +21,6 @@
 
 - (IBAction)net:(id)sender;
 
+- (IBAction)sandbox:(id)sender;
+
 @end
