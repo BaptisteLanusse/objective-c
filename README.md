@@ -215,3 +215,48 @@ Tous les objets suivent le même cycle de vie:
 3. Destruction
 
 Arc gère automatiquement la destruction des objets.
+
+#### Quelques Méthodes de classe utiles
+
+###### Tester l'égalité de deux NSString
+
+```objective-c
+if ([chaine1 isEqualToString:chaine2])
+{
+	//Traitement
+}
+```
+
+###### Longueur d'une chaine NSString
+
+```objective-c
+[chaine length];
+```
+
+###### Concaténer deux chaines NSString
+
+```objective-c
+[NSString stringWithFormat:@"%@%@", chaine1, chaine2];
+```
+
+###### Création d'une chaine NSString à partir d'une chaine char*
+
+```objective-c
+char *chaineC;
+NSString *chaineObjC;
+//Instructions
+chaineObjC = [NSString stringWithString: chaineC];
+```
+
+###### Parcourir un NSString caractère par caractère
+
+```objective-c
+NSString* chaine = @"helloworld";
+int length = [chaine length], cpt;
+char lettre;
+for(cpt = 0; cpt < length; cpt++)
+{
+	lettre = [chaine characterAtIndex:cpt];
+	NSLog(@"La lettre en position %i est %c", cpt, lettre);
+}
+```
