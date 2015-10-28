@@ -618,6 +618,47 @@ Et dans le ```.m```:
 @end
 ```
 
+## Demander l'avis utilisateur
+
+###### UIAlertView
+
+Dans le ```viewController.m```:
+```objective-c
+#import "ViewController.h"
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Voulez-vous arrêter ?" message:@"Confirmez que vous voulez quitter l'application" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Confirmer" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:defaultAction];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Annuler" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:cancelAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
+```
+
 ## Réalisations
 
 ###### TP - Mastermind
