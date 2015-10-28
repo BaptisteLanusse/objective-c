@@ -575,6 +575,49 @@ Et dans le ```.m```:
 @end
 ```
 
+###### Scroll View - Contenu trop grand pour l'écran
+
+Dans ```ViewController.h```, avec une scrollView, et à l'intérieur une imageView:
+```objective-c
+#import <UIKit/UIKit.h>
+
+@interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@end
+```
+
+Et dans le ```.m```:
+```objective-c
+#import "ViewController.h"
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+@synthesize scrollView;
+@synthesize imageView;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    [scrollView setScrollEnabled:YES];
+    [scrollView setContentSize:CGSizeMake(imageView.image.size.width, imageView.image.size.height)];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
+```
+
 ## Réalisations
 
 ###### TP - Mastermind
