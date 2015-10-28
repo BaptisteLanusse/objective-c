@@ -35,3 +35,23 @@ ET logique                          |                   &&
 OU logique                          |                   ||
 Affectation                         |                   =
 ```
+
+# Switch
+```objective-c
+switch (variable)
+{
+	case valeur1:
+		//instructions;
+		break;
+	case valeur2:
+		//instructions;
+		break;
+	case valeur3:
+		//instructions;
+		break;
+	...
+	default:
+		//instructions;
+		break;
+}
+```
