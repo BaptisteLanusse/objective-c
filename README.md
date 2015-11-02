@@ -659,6 +659,25 @@ Dans le ```viewController.m```:
 @end
 ```
 
+## Les informations Tabulaires
+
+Les vues tabulaires sont utilisées pour présenter des listes de données. Ces listes permettent de:
+
+ - présenter des options sélectionnables
+ - naviguer dans des données structurées
+ - présenter une liste d'éléments triés
+ - définir des niveaux de détail
+
+###### Table View - Affichage en colonne
+
+Le composant ```Table View``` permet d'afficher sur une colonne une liste de données. Il peut être composé de 0, 1 ou plusieurs sections, chaque section peut comporter:
+
+ - Une ou plusieurs lignes
+ - Être précédée d'un en-tête de section
+ - Être suivie d'un pied de section
+
+
+
 ## Réalisations
 
 ###### TP - Mastermind
