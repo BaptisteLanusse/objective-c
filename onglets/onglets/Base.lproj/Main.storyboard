@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mPa-hM-0Q7">
+                                <rect key="frame" x="0.0" y="20" width="121" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="kSe-7Y-NGs"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Premier"/>
+                                    <segment title="Deuxième"/>
+                                    <segment title="Troisième"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kSe-7Y-NGs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="kSe-7Y-NGs"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="ongletChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="zkL-eM-eIN"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXF-cU-bBC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knw-m3-ijh">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qXF-cU-bBC" secondAttribute="trailing" constant="-20" id="5LN-Vf-FaV"/>
+                            <constraint firstItem="Knw-m3-ijh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6pK-MJ-dHA"/>
+                            <constraint firstItem="mPa-hM-0Q7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7rM-gw-6H7"/>
+                            <constraint firstItem="qXF-cU-bBC" firstAttribute="top" secondItem="mPa-hM-0Q7" secondAttribute="bottom" constant="8" id="D72-1Y-GfS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Knw-m3-ijh" secondAttribute="bottom" constant="8" id="Eid-Ud-kRb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mPa-hM-0Q7" secondAttribute="trailing" constant="-20" id="FyF-YG-01R"/>
+                            <constraint firstItem="qXF-cU-bBC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="T0g-Jq-j0D"/>
+                            <constraint firstItem="Knw-m3-ijh" firstAttribute="top" secondItem="qXF-cU-bBC" secondAttribute="bottom" constant="8" id="YCf-6h-Ile"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qXF-cU-bBC" secondAttribute="bottom" constant="56" id="inn-5Q-eRx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Knw-m3-ijh" secondAttribute="trailing" constant="-20" id="m9z-hd-rOJ"/>
+                            <constraint firstItem="mPa-hM-0Q7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oQb-ye-9Hx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qXF-cU-bBC"/>
+                                <exclude reference="Knw-m3-ijh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7rM-gw-6H7"/>
+                                <exclude reference="FyF-YG-01R"/>
+                                <exclude reference="oQb-ye-9Hx"/>
+                                <exclude reference="5LN-Vf-FaV"/>
+                                <exclude reference="D72-1Y-GfS"/>
+                                <exclude reference="T0g-Jq-j0D"/>
+                                <exclude reference="6pK-MJ-dHA"/>
+                                <exclude reference="YCf-6h-Ile"/>
+                                <exclude reference="m9z-hd-rOJ"/>
+                                <exclude reference="Eid-Ud-kRb"/>
+                                <exclude reference="inn-5Q-eRx"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qXF-cU-bBC"/>
+                                <include reference="Knw-m3-ijh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7rM-gw-6H7"/>
+                                <include reference="FyF-YG-01R"/>
+                                <include reference="oQb-ye-9Hx"/>
+                                <include reference="5LN-Vf-FaV"/>
+                                <include reference="D72-1Y-GfS"/>
+                                <include reference="T0g-Jq-j0D"/>
+                                <include reference="6pK-MJ-dHA"/>
+                                <include reference="YCf-6h-Ile"/>
+                                <include reference="m9z-hd-rOJ"/>
+                                <include reference="Eid-Ud-kRb"/>
+                                <include reference="inn-5Q-eRx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="qXF-cU-bBC" id="bjg-kO-lDD"/>
+                        <outlet property="onglets" destination="mPa-hM-0Q7" id="pNh-RO-mTG"/>
+                        <outlet property="sousTitre" destination="Knw-m3-ijh" id="LLl-q7-O5K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="429"/>
+        </scene>
+    </scenes>
+</document>

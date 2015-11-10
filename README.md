@@ -676,7 +676,37 @@ Le composant ```Table View``` permet d'afficher sur une colonne une liste de don
  - Être précédée d'un en-tête de section
  - Être suivie d'un pied de section
 
+###### Picker View - Rouleau de sélection
 
+###### Date Picker - Sélection de date
+
+## Les contrôles d'action
+
+###### Les Boutons
+
+La classe principale des contrôleurs d'actions, utilisée dans toutes les applications.
+
+###### Segmented control
+
+Ils permettent d'afficher un contenu différent en fonction de la sélection en cours.
+
+###### Les zones de texte
+
+###### Les curseurs
+
+###### Les interrupteurs
+
+###### Les contrôles de page
+
+## Barres et tabulations
+
+###### Tab bar - Applications multi vues
+
+###### Barre d'outils
+
+###### Barre de recherche
+
+## Géolocalisation
 
 ## Réalisations
 
